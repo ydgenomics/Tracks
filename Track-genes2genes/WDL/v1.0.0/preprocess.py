@@ -1,9 +1,23 @@
-input_h5ad="/data/users/yangdong/yangdong_faff775391984da0a355d4bd70217714/online/cotton/output/convert/merge/r0.5/cotton_K2.hr.rds.rh.h5ad"
-batch_key="sample"
-n_hvg=2000
+### Date: 250827
 
 import scanpy as sc
 import os
+import argparse
+
+parser = argparse.ArgumentParser(description="Preprocess an h5ad file.")
+parser.add_argument("--input_h5ad", type=str, required=True,
+                    help="Path to the input h5ad file.")
+parser.add_argument("--batch_key", type=str, default="sample",
+                    help="Batch key in adata.obs (default: 'sample').")
+parser.add_argument("--n_hvg", type=int, default=2000,
+                    help="Number of highly variable genes (default: 2000).")
+
+args = parser.parse_args()
+input_h5ad = args.input_h5ad
+batch_key = args.batch_key
+n_hvg = args.n_hvg
+
+
 adata = sc.read_h5ad(input_h5ad)
 prefix = os.path.splitext(os.path.basename(input_h5ad))[0]
 print(adata.obs.columns)
