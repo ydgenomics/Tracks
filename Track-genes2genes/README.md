@@ -1,10 +1,45 @@
+# Aligning single-cell trajectories of gene expression with [Genes2Genes](https://github.com/Teichlab/Genes2Genes.git)
+- **Brief** 时序比较揭示时序差异基因
+- **Log**
+  - v1.0.0
+    - 250901 第一次提交Description
+- **Related** Track-pseudotime
+
+---
+# Input
+- **Variable**
+  - **h5ad_ref** Array [File] 作为时序比较Reference的h5ad文件
+  - **h5ad_query** Array [File] 作为时序比较Query的h5ad文件
+  - **prefix** Array [String] 输出文件夹的名字，与上面的顺序一一对应
+  - **pseudotime_key** String 储存拟时序信息的键
+  - **annotation_colname** String 储存亚群信息的键
+  - **mem_g2g** Int 运行g2g需要的内存资源GB
+
+**Note:** Reference和Query所做的拟时序分析所用方法应该一致，例如用**Track-pseudotime**跑palantir
+
+- **Example** [download]()
+
+
+---
+# Output
+- **Frame**
+```shell
+
+```
+
+
+- **Interpretation**
+
+
+- **Next**
+  - Enrich
+
+
+---
 # Detail
-**Workflow**
-  - preprocess 对h5ad文件做标准化并补充Hvg，仍然使用X_pca作为降维的键
-  - pseudotime 拟时序分析，CytoTRACE, dpt, palantir (提供找起点的notebook)
+- **Workflow**
   - g2g 对.X标准化后且具有pseudotime_key的共有hvg进行时序比较
 
-**Related:** **Track-cytotrace, Track-dpt, Track-palantir, Track-g2g**
 读懂Genes2Genes的原理
 Genes2Genes感觉跟Gene2Role有相似的思路，比的是共有基因，gene-level的比较。在Gene2Role，作者将目标基因的相关拓扑结构转换为行向量，通过行向量计算做定量和定性分析。在Genes2Genes中，作者将目标基因的表达按时序进行排列，分段进行比较(趋势和表达量)，大致分match & mismatch两大类，然后再通过five states machine去拿到不同的type。
 
@@ -38,6 +73,13 @@ aligner.get_aggregate_alignment_for_subset(GENE_SUBSET) #根据Arrary属性的GE
 
 pseudotime可以通过monocle3获得，然后用默认代码将其调整为范围[0,1]，并存储于`time`  --似乎不太行，好像要指定root细胞
 
+- **Software**
+
+- **Script**
+
+- **Image**
+  - g2g_env--01, g2g_env
+
 ```shell
 source /opt/software/miniconda3/bin/activate
 conda create --name g2g python=3.8 -y
@@ -48,8 +90,8 @@ pip install git+https://github.com/Teichlab/Genes2Genes.git -i https://mirrors.a
 pip install optbinning # https://gnpalencia.org/optbinning/installation.html
 conda install conda-forge::ipykernel -y
 conda install conda-forge::scanpy -y
-conda install conda-forge::papermill -y
-python -m ipykernel install --user --name cellrank2 --display-name "Python (cellrank2)"
+# conda install conda-forge::papermill -y
+# python -m ipykernel install --user --name cellrank2 --display-name "Python (cellrank2)"
 
 # conda create --name g2g python=3.8 -y
 # conda activate g2g
