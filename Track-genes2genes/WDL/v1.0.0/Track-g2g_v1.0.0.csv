@@ -1,0 +1,2 @@
+EntityID,h5ad_ref,h5ad_query,prefix,pseudotime_key,annotation_colname,mem_g2g
+test,/Files/yangdong/wdl/Track-pseudotime/W202508270146180/pseudotime/cotton_K2.hr.rds.rh_palantir.h5ad,/Files/yangdong/wdl/Track-pseudotime/W202508270146318/pseudotime/cotton_D3.hr.rds.rh_palantir.h5ad,K2_vs_D3,palantir_pseudotime,RNA_snn_res.0.5,32
