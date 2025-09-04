@@ -17,7 +17,7 @@
 
 **Note:** Reference和Query所做的拟时序分析所用方法应该一致，例如用**Track-pseudotime**跑palantir
 
-- **Example** [download]()
+- **Example** [download](https://github.com/ydgenomics/Tracks/blob/main/Track-genes2genes/WDL/v1.0.0/Track-g2g_v1.0.0.csv)
 
 |EntityID|h5ad_ref|h5ad_query|prefix|pseudotime_key|annotation_colname|mem_g2g|
 |---|---|---|---|---|---|---|
@@ -128,7 +128,8 @@ pseudotime可以通过monocle3获得，然后用默认代码将其调整为范�
 - **Software**
   - [Genes2Genes](https://github.com/Teichlab/Genes2Genes)
 - **Script**
-  - [g2g.ipynb]()
+  - [preprocess.py](https://github.com/ydgenomics/Tracks/blob/main/Track-genes2genes/WDL/v1.0.0/preprocess.py)
+  - [g2g.ipynb](https://github.com/ydgenomics/Tracks/blob/main/Track-genes2genes/WDL/v1.0.0/g2g.ipynb)
 - **Image**
   - g2g_env--01, g2g_env
 
@@ -153,3 +154,7 @@ conda install conda-forge::scanpy -y
 
 ---
 # Coder
+- **Editor:** yangdong (yangdong@genomics.cn)
+- **GitHub:** [ydgenomics](https://github.com/ydgenomics)
+- **Prospect:** Focused on innovative, competitive, open-source projects and collaboration
+- **Repository:** [Tracks/Track-genes2genes](https://github.com/ydgenomics/Tracks/tree/main/Track-genes2genes)

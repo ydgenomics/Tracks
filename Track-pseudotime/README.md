@@ -23,7 +23,7 @@
 
 **Note:** cytotrace是无监督方法，使用的参数最少；dpt方法使用的参数很多，可以找到起点细胞；palantir依赖于起点细胞，可以通过多次运行dpt找到最佳的起点细胞后再跑palantir
 
-- **Example** [download]()
+- **Example** [download](https://github.com/ydgenomics/Tracks/blob/main/Track-pseudotime/Track-pseudotime_v1.0.0.csv)
 
 |EntityID|h5ad_subset|batch_key|cluster_key|h5ad_all|cluster_key_all|tool4pseudotime|root_cluster|n_pc|use_argmin|root_idx|mem_preprocess|mem_pseudotime|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -58,9 +58,9 @@ tree /data/input/Files/yangdong/wdl/Track-pseudotime/W202508270146490
   - DPT
   - palantir
 - **Script**
-  - [cytotrace.ipynb]()
-  - [dpt.ipynb]()
-  - [palantir.ipynb]()
+  - [cytotrace.ipynb](https://github.com/ydgenomics/Tracks/blob/main/Track-cytotrace/WDL/v1.0.0/cytotrace.ipynb)
+  - [dpt.ipynb](https://github.com/ydgenomics/Tracks/blob/main/Tracks-dpt/WDL/v1.0.0/dpt.ipynb)
+  - [palantir.ipynb](https://github.com/ydgenomics/Tracks/blob/main/Track-palantir/WDL/v1.0.0/palantir.ipynb)
 - **Image**
   - cellrank2--04, cellrank2--03
 
@@ -98,3 +98,7 @@ python -m ipykernel install --user --name cellrank2 --display-name "Python (cell
 
 ---
 # Coder
+- **Editor:** yangdong (yangdong@genomics.cn)
+- **GitHub:** [ydgenomics](https://github.com/ydgenomics)
+- **Prospect:** Focused on innovative, competitive, open-source projects and collaboration
+- **Repository:** [Tracks/Track-pseudotime](https://github.com/ydgenomics/Tracks/tree/main/Track-pseudotime)
