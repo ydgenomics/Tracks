@@ -2,6 +2,7 @@
 - **Brief** 时序比较揭示时序差异基因
 - **Log**
   - v1.0.0
+    - 0923 判断pseudotime范围并适时做normalize
     - 250901 第一次提交Description
 - **Related** Track-pseudotime
 
